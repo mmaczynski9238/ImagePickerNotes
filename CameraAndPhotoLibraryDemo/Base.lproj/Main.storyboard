@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="CameraAndPhotoLibraryDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7B-Nh-sB0">
+                                <rect key="frame" x="300" y="530" width="300" height="70"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="0.82999999999999996" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7iP-jP-5UL"/>
+                                    <constraint firstAttribute="height" constant="70" id="UCm-8C-ffw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Photos">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7iP-jP-5UL"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="photoLibraryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aDr-NY-mmd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IrF-Vj-KZs">
+                                <rect key="frame" x="0.0" y="530" width="300" height="70"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="rFW-pB-jTD"/>
+                                    <constraint firstAttribute="width" constant="100" id="spS-t9-xxd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Camera">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="spS-t9-xxd"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cqh-7p-SiF"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mobile Makers Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="VlS-ss-wJa">
+                                <rect key="frame" x="0.0" y="20" width="600" height="510"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L7B-Nh-sB0" firstAttribute="leading" secondItem="IrF-Vj-KZs" secondAttribute="trailing" constant="16" id="7yC-VD-zt4"/>
+                            <constraint firstAttribute="trailing" secondItem="VlS-ss-wJa" secondAttribute="trailing" id="9nT-FO-5Sb"/>
+                            <constraint firstItem="IrF-Vj-KZs" firstAttribute="top" secondItem="VlS-ss-wJa" secondAttribute="bottom" id="DZ1-CJ-TNn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L7B-Nh-sB0" secondAttribute="bottom" id="EvX-z2-cZt"/>
+                            <constraint firstItem="L7B-Nh-sB0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="16" id="QIW-7r-2Vq"/>
+                            <constraint firstItem="VlS-ss-wJa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Vqu-eN-aLg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IrF-Vj-KZs" secondAttribute="bottom" id="Y1a-vT-EDV"/>
+                            <constraint firstItem="IrF-Vj-KZs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="fQh-Zk-LJ1"/>
+                            <constraint firstItem="VlS-ss-wJa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="l2f-CT-Sb6"/>
+                            <constraint firstItem="L7B-Nh-sB0" firstAttribute="width" secondItem="IrF-Vj-KZs" secondAttribute="width" id="qPD-RW-wNb"/>
+                            <constraint firstItem="L7B-Nh-sB0" firstAttribute="leading" secondItem="IrF-Vj-KZs" secondAttribute="trailing" id="vhE-hn-1Ox"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="VlS-ss-wJa" id="YFq-2y-hcB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Mobile Makers Wallpaper" width="1440" height="900"/>
+    </resources>
+</document>
